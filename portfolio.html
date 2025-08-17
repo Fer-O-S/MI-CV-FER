@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio - Fernando Ortega Sánchez</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/css.gg/2.0.0/css.gg.min.css"
+    />
+    <link rel="stylesheet" href="css/css-gg.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico" />
+    <script src="/js/siteportfolio.js" defer></script>
+  </head>
+  <body>
+    <!-- Header with theme toggle -->
+    <div class="header">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <i class="gg-sun" id="themeIcon"></i>
+      </button>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="gg-menu"></i>
+      </button>
+    </div>
+
+    <!-- Floating shapes for decoration -->
+    <div
+      class="floating-shape"
+      style="
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        border-radius: 50%;
+        opacity: 0.05;
+      "
+    ></div>
+    <div
+      class="floating-shape"
+      style="
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, var(--secondary), var(--accent));
+        border-radius: 30px;
+        opacity: 0.05;
+      "
+    ></div>
+    <div
+      class="floating-shape"
+      style="
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--accent), var(--success));
+        border-radius: 50%;
+        opacity: 0.05;
+      "
+    ></div>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Acerca de</a>
+      <a href="#portfolio">Portafolio</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#stats">Estadísticas</a>
+    </nav>
+
+    <div class="container">
+      <aside class="profile loading">
+        <div class="profile-content">
+          <img
+            src="resources/PARA PAGINA CV.jpg"
+            alt="Fernando Ortega"
+            class="profile-photo-full"
+          />
+          <h1>Fernando Ortega Sánchez</h1>
+          <div class="profile-title">🚀 Desarrollador Backend Jr</div>
+          <div class="contact-info-creative">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-clock"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Actualizado</span>
+                <span class="contact-value">Agosto 2025</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Ubicación</span>
+                <span class="contact-value">Puebla, Puebla, MX</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <a href="mailto:fos13022004@gmail.com" class="contact-link"
+                  >fos13022004@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/fernando-ortega-dev"
+                  target="_blank"
+                  class="contact-link"
+                  >fernando-ortega-dev</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-github"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <a
+                  href="https://github.com/Fer-O-S"
+                  target="_blank"
+                  class="contact-link"
+                  >Fer-O-S</a
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            href="resources/CV_Fernando_Ortega_Sanchez.pdf"
+            class="download-btn"
+            download
+          >
+            <i class="gg-software-download"></i>
+            Descargar CV
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content loading">
+        <div class="main-header">
+          <h1 class="main-title">Mi Portafolio 🎨</h1>
+          <p class="main-subtitle">
+            Proyectos destacados y logros profesionales
+          </p>
+        </div>
+
+        <div class="main-body">
+          <!-- Navigation -->
+          <div class="nav-links">
+            <a href="index.html" class="nav-link">Acerca de</a>
+            <a href="#portfolio" class="nav-link active">Portafolio</a>
+            <a href="#projects" class="nav-link">Proyectos</a>
+            <a href="#stats" class="nav-link">Estadísticas</a>
+          </div>
+
+          <!-- Stats Section -->
+          <section id="stats" class="stats-section loading">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Proyectos Completados</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Tecnologías Dominadas</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">2026</div>
+                <div class="stat-label">Año de Graduación</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Año de Experiencia</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="portfolio" class="section">
+            <h2 class="section-title">Mi Portafolio</h2>
+
+            <div class="filter-buttons">
+              <button class="filter-btn active" onclick="filterProjects('all')">
+                🌟 Todos
+              </button>
+              <button class="filter-btn" onclick="filterProjects('web')">
+                🌐 Desarrollo Web
+              </button>
+              <button class="filter-btn" onclick="filterProjects('mobile')">
+                📱 Apps Móviles
+              </button>
+              <button class="filter-btn" onclick="filterProjects('backend')">
+                ⚙️ Backend APIs
+              </button>
+              <button class="filter-btn" onclick="filterProjects('database')">
+                🗄️ Bases de Datos
+              </button>
+              <button
+                class="filter-btn"
+                onclick="filterProjects('certificates')"
+              >
+                🏆 Certificaciones
+              </button>
+            </div>
+
+            <div class="portfolio-grid">
+              <div
+                class="portfolio-item loading"
+                data-category="database"
+                onclick="showImage('resources/Base relacional Covid19.png')"
+              >
+                <div class="portfolio-item-image">
+                  <img
+                    src="resources/Base relacional Covid19.png"
+                    alt="Base de Datos COVID-19"
+                  />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>🦠 Base de Datos Relacional COVID-19</h3>
+                  <p>
+                    Diseño y modelado de base de datos relacional completa para
+                    gestión de información relacionada con COVID-19, incluyendo
+                    pacientes, hospitales y estadísticas.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">SQL</span>
+                    <span class="portfolio-tag">Modelado DB</span>
+                    <span class="portfolio-tag">Relacional</span>
+                    <span class="portfolio-tag">COVID-19</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item loading"
+                data-category="web"
+                onclick="showImage('resources/BEDIFERENT INDEX.png')"
+              >
+                <div class="portfolio-item-image">
+                  <img
+                    src="resources/BEDIFERENT INDEX.png"
+                    alt="BeDifferent - Página Principal"
+                  />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>🛍️ BeDifferent - E-commerce</h3>
+                  <p>
+                    Sitio web corporativo con diseño moderno y funcionalidades
+                    completas de comercio electrónico, catálogo de productos y
+                    sistema de gestión.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">HTML5</span>
+                    <span class="portfolio-tag">CSS3</span>
+                    <span class="portfolio-tag">JavaScript</span>
+                    <span class="portfolio-tag">E-commerce</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item loading"
+                data-category="web"
+                onclick="showImage('resources/BEDIFERENT LOGIN.png')"
+              >
+                <div class="portfolio-item-image">
+                  <img
+                    src="resources/BEDIFERENT LOGIN.png"
+                    alt="BeDifferent - Login"
+                  />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>🔐 Sistema de Autenticación</h3>
+                  <p>
+                    Sistema de login seguro con diseño responsive, validaciones
+                    en tiempo real y experiencia de usuario optimizada para
+                    múltiples dispositivos.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">Autenticación</span>
+                    <span class="portfolio-tag">UX/UI</span>
+                    <span class="portfolio-tag">Responsive</span>
+                    <span class="portfolio-tag">Seguridad</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item loading"
+                data-category="web"
+                onclick="showImage('resources/BEDIFERENT REGISTER.png')"
+              >
+                <div class="portfolio-item-image">
+                  <img
+                    src="resources/BEDIFERENT REGISTER.png"
+                    alt="BeDifferent - Registro"
+                  />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>📝 Sistema de Registro</h3>
+                  <p>
+                    Formulario de registro intuitivo con validaciones avanzadas,
+                    verificación de datos y proceso de onboarding optimizado.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">Formularios</span>
+                    <span class="portfolio-tag">Validaciones</span>
+                    <span class="portfolio-tag">JavaScript</span>
+                    <span class="portfolio-tag">UX</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item loading"
+                data-category="backend"
+                onclick="showImage('resources/API.png')"
+              >
+                <div class="portfolio-item-image">
+                  <img src="resources/API.png" alt="Desarrollo de API" />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>🔧 API RESTful con NestJS</h3>
+                  <p>
+                    Desarrollo de APIs robustas con NestJS, implementando Clean
+                    Architecture, documentación con Swagger y integración con
+                    múltiples bases de datos.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">NestJS</span>
+                    <span class="portfolio-tag">TypeScript</span>
+                    <span class="portfolio-tag">Clean Architecture</span>
+                    <span class="portfolio-tag">REST API</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item loading"
+                data-category="web"
+                onclick="showImage('resources/PLUGIN.png')"
+              >
+                <div class="portfolio-item-image">
+                  <img src="resources/PLUGIN.png" alt="Plugin Development" />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>🔌 Desarrollo de Plugin</h3>
+                  <p>
+                    Plugin personalizado para extensión de funcionalidades en
+                    aplicaciones web, con arquitectura modular y fácil
+                    integración.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">Plugin</span>
+                    <span class="portfolio-tag">JavaScript</span>
+                    <span class="portfolio-tag">Extensiones</span>
+                    <span class="portfolio-tag">Modular</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item loading"
+                data-category="certificates"
+                onclick="showImage('resources/Titulo TSU.jpg')"
+              >
+                <div class="portfolio-item-image">
+                  <img src="resources/Titulo TSU.jpg" alt="Título TSU" />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>🎓 Título TSU - Desarrollo de Software</h3>
+                  <p>
+                    Título universitario en Desarrollo de Software
+                    Multiplataforma obtenido en la Universidad Tecnológica de
+                    Puebla con excelencia académica.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">Graduación</span>
+                    <span class="portfolio-tag">2024</span>
+                    <span class="portfolio-tag">UTP</span>
+                    <span class="portfolio-tag">Software</span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="portfolio-item loading"
+                data-category="certificates"
+                onclick="showImage('resources/CISCO certificado.jpg')"
+              >
+                <div class="portfolio-item-image">
+                  <img
+                    src="resources/CISCO certificado.jpg"
+                    alt="Certificado Cisco"
+                  />
+                  <div class="portfolio-overlay">
+                    <i class="gg-eye"></i>
+                  </div>
+                </div>
+                <div class="portfolio-item-info">
+                  <h3>🌐 Certificación Cisco Academy</h3>
+                  <p>
+                    Certificación profesional en redes y tecnologías de la
+                    información con enfoque práctico en infraestructura y
+                    comunicaciones.
+                  </p>
+                  <div class="portfolio-tags">
+                    <span class="portfolio-tag">Cisco</span>
+                    <span class="portfolio-tag">Redes</span>
+                    <span class="portfolio-tag">Certificación</span>
+                    <span class="portfolio-tag">IT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="projects" class="section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+
+            <div class="project-highlight loading">
+              <div class="highlight-title">
+                <div class="highlight-icon">
+                  <i class="gg-smartphone"></i>
+                </div>
+                🐾 App de Rescate Animal (Interfaz TikTok)
+              </div>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  line-height: 1.7;
+                  margin-bottom: 20px;
+                "
+              >
+                Aplicación móvil innovadora tipo red social para adopción de
+                animales en situación de calle. Desarrollada con Flutter y
+                Firebase, incluye interfaz similar a TikTok con sistema de
+                swipe, videos cortos de mascotas, perfiles detallados y proceso
+                completo de adopción.
+              </p>
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Flutter</span>
+                <span class="portfolio-tag">Firebase</span>
+                <span class="portfolio-tag">TikTok UI</span>
+                <span class="portfolio-tag">Social Network</span>
+                <span class="portfolio-tag">Adopción</span>
+              </div>
+            </div>
+
+            <div class="projects-timeline">
+              <div class="timeline-project loading">
+                <div class="timeline-icon">
+                  <i class="gg-website"></i>
+                </div>
+                <h4 class="project-title">
+                  🚌 Plataforma de Reservas de Autobuses
+                </h4>
+                <p class="project-period">2024 - Desarrollo Web Completo</p>
+                <p class="project-description">
+                  Sistema web integral que permite a estudiantes reservar y
+                  apartar lugares en autobuses escolares de forma segura y
+                  organizada. Incluye gestión completa de usuarios, sistema de
+                  pagos integrado, panel administrativo avanzado y reportes en
+                  tiempo real.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">PHP</span>
+                  <span class="project-tag">MySQL</span>
+                  <span class="project-tag">Bootstrap</span>
+                  <span class="project-tag">Admin Panel</span>
+                  <span class="project-tag">Pagos</span>
+                </div>
+              </div>
+
+              <div class="timeline-project loading">
+                <div class="timeline-icon">
+                  <i class="gg-shopping-cart"></i>
+                </div>
+                <h4 class="project-title">🛒 Sistema de E-commerce Completo</h4>
+                <p class="project-period">2024 - Proyecto Integral</p>
+                <p class="project-description">
+                  Desarrollo de sitio web con funcionalidades completas de
+                  comercio electrónico: carrito de compras inteligente, gestión
+                  avanzada de usuarios, catálogo dinámico de productos, sistema
+                  de pagos seguro y panel de administración con analytics.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">E-commerce</span>
+                  <span class="project-tag">Carrito</span>
+                  <span class="project-tag">Catálogo</span>
+                  <span class="project-tag">Pagos</span>
+                  <span class="project-tag">Analytics</span>
+                </div>
+              </div>
+
+              <div class="timeline-project loading">
+                <div class="timeline-icon">
+                  <i class="gg-list"></i>
+                </div>
+                <h4 class="project-title">📋 App Móvil de Gestión de Tareas</h4>
+                <p class="project-period">2023 - Aplicación Móvil</p>
+                <p class="project-description">
+                  Aplicación móvil intuitiva que permite registrar, actualizar y
+                  visualizar tareas pendientes de manera eficiente. Interfaz
+                  moderna con animaciones fluidas, notificaciones push y
+                  sincronización en la nube.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Mobile</span>
+                  <span class="project-tag">Flutter</span>
+                  <span class="project-tag">UI/UX</span>
+                  <span class="project-tag">Productividad</span>
+                  <span class="project-tag">Cloud</span>
+                </div>
+              </div>
+
+              <div class="timeline-project loading">
+                <div class="timeline-icon">
+                  <i class="gg-briefcase"></i>
+                </div>
+                <h4 class="project-title">💼 Experiencia Laboral Actual</h4>
+                <p class="project-period">2025 - Desarrollador Backend Jr</p>
+                <p class="project-description">
+                  Desarrollo profesional de APIs robustas con NestJS
+                  implementando Clean Architecture. Trabajo con WebSockets para
+                  comunicación en tiempo real, integración completa con Stripe
+                  para procesamiento de pagos, y colaboración estrecha con
+                  equipos de frontend web y móvil.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">NestJS</span>
+                  <span class="project-tag">Clean Architecture</span>
+                  <span class="project-tag">WebSockets</span>
+                  <span class="project-tag">Stripe</span>
+                  <span class="project-tag">Team Work</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Enhanced Modal -->
+    <div class="modal" id="imageModal">
+      <div class="modal-content">
+        <button class="close-button" onclick="closeModal()">×</button>
+        <img id="modalImage" src="" alt="Vista previa" />
+      </div>
+    </div>
+
+    <script>
+      let currentTheme = "light";
+
+      function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById("themeIcon");
+
+        if (currentTheme === "light") {
+          body.setAttribute("data-theme", "dark");
+          themeIcon.className = "gg-moon";
+          currentTheme = "dark";
+        } else {
+          body.removeAttribute("data-theme");
+          themeIcon.className = "gg-sun";
+          currentTheme = "light";
+        }
+      }
+
+      function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+        navMenu.classList.toggle("active");
+      }
+
+      function showImage(imageSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = imageSrc;
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.remove("show");
+        document.body.style.overflow = "auto";
+      }
+
+      function filterProjects(category) {
+        const items = document.querySelectorAll(".portfolio-item");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        // Update active button with smooth transition
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        // Filter items with staggered animation
+        items.forEach((item, index) => {
+          if (category === "all" || item.dataset.category === category) {
+            item.style.display = "block";
+            setTimeout(() => {
+              item.style.opacity = "1";
+              item.style.transform = "translateY(0)";
+            }, index * 100);
+          } else {
+            item.style.opacity = "0";
+            item.style.transform = "translateY(30px)";
+            setTimeout(() => {
+              item.style.display = "none";
+            }, 300);
+          }
+        });
+      }
+
+      // Close modal when clicking outside
+      document
+        .getElementById("imageModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeModal();
+          }
+        });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (e) {
+        const navMenu = document.getElementById("navMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          navMenu.classList.remove("active");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+          // Close mobile menu if open
+          document.getElementById("navMenu").classList.remove("active");
+
+          // Update active nav link
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((link) => link.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = "running";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all loading elements
+      document.querySelectorAll(".loading").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Initialize animations on load
+      window.addEventListener("load", function () {
+        document.querySelectorAll(".loading").forEach((el, index) => {
+          setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }, index * 100);
+        });
+      });
+
+      // Add parallax effect on scroll
+      window.addEventListener("scroll", function () {
+        const scrolled = window.pageYOffset;
+        const shapes = document.querySelectorAll(".floating-shape");
+
+        shapes.forEach((shape, index) => {
+          const speed = 0.5 + index * 0.1;
+          shape.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+
+      // Add entrance animations for portfolio items
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+      const portfolioObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }, index * 150);
+          }
+        });
+      }, observerOptions);
+
+      portfolioItems.forEach((item) => {
+        portfolioObserver.observe(item);
+      });
+    </script>
+  </body>
+</html>

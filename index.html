@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Fernando Ortega Sánchez</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/css.gg/2.0.0/css.gg.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico" />
+    <script src="/js/siteindex.js" defer></script>
+  </head>
+  <body>
+    <!-- Header with theme toggle -->
+    <div class="header">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <i class="gg-sun" id="themeIcon"></i>
+      </button>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="gg-menu"></i>
+      </button>
+    </div>
+
+    <!-- Floating shapes for decoration -->
+    <div
+      class="floating-shape"
+      style="
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        border-radius: 50%;
+        opacity: 0.05;
+      "
+    ></div>
+    <div
+      class="floating-shape"
+      style="
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, var(--secondary), var(--accent));
+        border-radius: 30px;
+        opacity: 0.05;
+      "
+    ></div>
+    <div
+      class="floating-shape"
+      style="
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--accent), var(--success));
+        border-radius: 50%;
+        opacity: 0.05;
+      "
+    ></div>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#about">Acerca de</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#experience">Experiencia</a>
+      <a href="#portfolio" onclick="window.open('portfolio.html', '_self')"
+        >Portafolio</a
+      >
+    </nav>
+
+    <div class="container">
+      <aside class="profile loading">
+        <div class="profile-content">
+          <img
+            src="resources/PARA PAGINA CV.jpg"
+            alt="Fernando Ortega"
+            class="profile-photo-full"
+          />
+          <h1>Fernando Ortega Sánchez</h1>
+          <div class="profile-title">🚀 Desarrollador Backend Jr</div>
+          <div class="contact-info-creative">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-clock"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Actualizado</span>
+                <span class="contact-value">Agosto 2025</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Ubicación</span>
+                <span class="contact-value">Puebla, Puebla, MX</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <a href="mailto:fos13022004@gmail.com" class="contact-link"
+                  >fos13022004@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/fernando-ortega-dev"
+                  target="_blank"
+                  class="contact-link"
+                  >fernando-ortega-dev</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-github"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <a
+                  href="https://github.com/Fer-O-S"
+                  target="_blank"
+                  class="contact-link"
+                  >Fer-O-S</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="resources/CV_Fernando_Ortega_Sanchez.pdf"
+            class="download-btn"
+            download
+          >
+            <i class="gg-software-download"></i>
+            Descargar CV
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content loading">
+        <div class="main-header">
+          <h1 class="main-title">¡Hola! 👋</h1>
+          <p class="main-subtitle">Bienvenido a mi CV digital interactivo</p>
+        </div>
+
+        <div class="main-body">
+          <!-- Navigation -->
+          <div class="nav-links">
+            <a href="#about" class="nav-link active">Acerca de</a>
+            <a href="#skills" class="nav-link">Habilidades</a>
+            <a href="#experience" class="nav-link">Experiencia</a>
+            <a
+              href="#"
+              class="nav-link"
+              onclick="window.open('portfolio.html', '_self')"
+              >Portafolio</a
+            >
+          </div>
+
+          <section id="about" class="section">
+            <h2 class="section-title">Acerca de mí</h2>
+            <div class="about-text">
+              Desarrollador Backend Jr especializado en
+              <strong>NestJS</strong> y <strong>arquitectura limpia</strong>,
+              con experiencia en desarrollo de APIs RESTful, WebSockets y
+              integración de pagos con Stripe. Graduado en Desarrollo de
+              Software Multiplataforma de la Universidad Tecnológica de Puebla.
+            </div>
+            <div class="about-text">
+              Actualmente trabajo en el área de backend desarrollando APIs que
+              consumen equipos de frontend web y móvil. Me enfoco en crear
+              <strong>soluciones escalables, mantenibles</strong> y orientadas a
+              las mejores prácticas de desarrollo. Mi pasión es transformar
+              ideas complejas en código limpio y eficiente.
+            </div>
+          </section>
+
+          <section id="skills" class="section">
+            <h2 class="section-title">Mis Habilidades</h2>
+            <div class="skills-grid">
+              <div class="skill-card loading">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="gg-code"></i>
+                  </div>
+                  <h3 class="skill-title">Desarrollo Backend</h3>
+                </div>
+                <p class="skill-description">
+                  Especializado en NestJS con Clean Architecture, desarrollo de
+                  APIs RESTful, WebSockets y integración de servicios externos
+                  como Stripe.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+                <span class="skill-percentage">85% Competencia</span>
+              </div>
+
+              <div class="skill-card loading">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="gg-database"></i>
+                  </div>
+                  <h3 class="skill-title">Bases de Datos</h3>
+                </div>
+                <p class="skill-description">
+                  Experiencia con MySQL, PostgreSQL, MongoDB y SQL Server.
+                  Diseño de esquemas eficientes y optimización de consultas.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+                <span class="skill-percentage">80% Competencia</span>
+              </div>
+
+              <div class="skill-card loading">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="gg-smartphone"></i>
+                  </div>
+                  <h3 class="skill-title">Desarrollo Móvil</h3>
+                </div>
+                <p class="skill-description">
+                  Desarrollo de aplicaciones móviles con Flutter y Firebase,
+                  incluyendo interfaces tipo TikTok y funcionalidades de red
+                  social.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 75%"></div>
+                </div>
+                <span class="skill-percentage">75% Competencia</span>
+              </div>
+
+              <div class="skill-card loading">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="gg-website"></i>
+                  </div>
+                  <h3 class="skill-title">Desarrollo Web</h3>
+                </div>
+                <p class="skill-description">
+                  Frontend con HTML5, CSS3, JavaScript/TypeScript, Angular y
+                  Bootstrap. Backend con .NET, Node.js y PHP.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 82%"></div>
+                </div>
+                <span class="skill-percentage">82% Competencia</span>
+              </div>
+
+              <div class="skill-card loading">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="gg-users"></i>
+                  </div>
+                  <h3 class="skill-title">Trabajo en Equipo</h3>
+                </div>
+                <p class="skill-description">
+                  Experiencia colaborando en equipos multidisciplinarios,
+                  comunicación efectiva y liderazgo en proyectos grupales.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+                <span class="skill-percentage">90% Competencia</span>
+              </div>
+
+              <div class="skill-card loading">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="gg-loadbar-doc"></i>
+                  </div>
+                  <h3 class="skill-title">Resolución de Problemas</h3>
+                </div>
+                <p class="skill-description">
+                  Capacidad analítica para identificar problemas técnicos y
+                  proponer soluciones eficientes y escalables.
+                </p>
+                <div class="skill-level">
+                  <div class="skill-progress" style="width: 88%"></div>
+                </div>
+                <span class="skill-percentage">88% Competencia</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="tech-section">
+            <h2 class="section-title">Stack Tecnológico</h2>
+            <div class="tech-grid">
+              <div class="tech-category loading">
+                <h4>💻 Lenguajes de Programación</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge">JavaScript</span>
+                  <span class="tech-badge">TypeScript</span>
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">C#</span>
+                  <span class="tech-badge">PHP</span>
+                  <span class="tech-badge">HTML5</span>
+                  <span class="tech-badge">CSS3</span>
+                </div>
+              </div>
+
+              <div class="tech-category loading">
+                <h4>🚀 Frameworks & Tecnologías</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge">NestJS</span>
+                  <span class="tech-badge">Node.js</span>
+                  <span class="tech-badge">.NET</span>
+                  <span class="tech-badge">Angular</span>
+                  <span class="tech-badge">Flutter</span>
+                  <span class="tech-badge">Bootstrap</span>
+                </div>
+              </div>
+
+              <div class="tech-category loading">
+                <h4>🗄️ Bases de Datos</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge">MySQL</span>
+                  <span class="tech-badge">PostgreSQL</span>
+                  <span class="tech-badge">MongoDB</span>
+                  <span class="tech-badge">SQL Server</span>
+                </div>
+              </div>
+
+              <div class="tech-category loading">
+                <h4>🛠️ Herramientas</h4>
+                <div class="tech-badges">
+                  <span class="tech-badge">Git</span>
+                  <span class="tech-badge">GitHub</span>
+                  <span class="tech-badge">VS Code</span>
+                  <span class="tech-badge">Visual Studio</span>
+                  <span class="tech-badge">Android Studio</span>
+                  <span class="tech-badge">Postman</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="experience" class="section">
+            <h2 class="section-title">Experiencia y Formación</h2>
+
+            <h3
+              style="
+                color: var(--primary);
+                margin: 30px 0 20px 0;
+                font-size: 1.4rem;
+                font-weight: 600;
+              "
+            >
+              💼 Experiencia Laboral
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-briefcase"></i>
+                </div>
+                <h4 class="timeline-title">Desarrollador Backend Jr</h4>
+                <p class="timeline-period">2025 - Presente</p>
+                <p class="timeline-description">
+                  Desarrollo de APIs RESTful con NestJS siguiendo Clean
+                  Architecture. Implementación de WebSockets para comunicación
+                  en tiempo real e integración de pagos con Stripe. Colaboración
+                  con equipos de frontend web y móvil.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">NestJS</span>
+                  <span class="timeline-tag">Clean Architecture</span>
+                  <span class="timeline-tag">WebSockets</span>
+                  <span class="timeline-tag">Stripe</span>
+                </div>
+              </div>
+            </div>
+
+            <h3
+              style="
+                color: var(--primary);
+                margin: 30px 0 20px 0;
+                font-size: 1.4rem;
+                font-weight: 600;
+              "
+            >
+              🎓 Educación
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-awards"></i>
+                </div>
+                <h4 class="timeline-title">
+                  Título en Desarrollo de Software Multiplataforma
+                </h4>
+                <p class="timeline-period">Diciembre 2024</p>
+                <p class="timeline-description">
+                  Universidad Tecnológica de Puebla - Graduado con conocimientos
+                  sólidos en desarrollo web, móvil y de software empresarial.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">TSU</span>
+                  <span class="timeline-tag">UTP</span>
+                  <span class="timeline-tag">Software</span>
+                </div>
+              </div>
+
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-designmodo"></i>
+                </div>
+                <h4 class="timeline-title">Certificación Cisco Academy</h4>
+                <p class="timeline-period">2024</p>
+                <p class="timeline-description">
+                  Formación en redes y tecnologías de la información con enfoque
+                  práctico y profesional.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Cisco</span>
+                  <span class="timeline-tag">Redes</span>
+                  <span class="timeline-tag">IT</span>
+                </div>
+              </div>
+
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-globe"></i>
+                </div>
+                <h4 class="timeline-title">Inglés (Nivel A2)</h4>
+                <p class="timeline-period">En progreso</p>
+                <p class="timeline-description">
+                  Mejorando habilidades de comunicación en inglés para facilitar
+                  el trabajo en entornos globales.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Inglés</span>
+                  <span class="timeline-tag">A2</span>
+                  <span class="timeline-tag">Comunicación</span>
+                </div>
+              </div>
+            </div>
+
+            <h3
+              style="
+                color: var(--primary);
+                margin: 30px 0 20px 0;
+                font-size: 1.4rem;
+                font-weight: 600;
+              "
+            >
+              🚀 Proyectos Destacados
+            </h3>
+            <div class="timeline">
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-smartphone"></i>
+                </div>
+                <h4 class="timeline-title">
+                  App de Rescate Animal con Interfaz tipo TikTok
+                </h4>
+                <p class="timeline-period">2025</p>
+                <p class="timeline-description">
+                  Aplicación móvil tipo red social para adopción de animales en
+                  situación de calle, desarrollada con Flutter y Firebase.
+                  Interfaz innovadora tipo TikTok para mejorar la experiencia
+                  del usuario.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Flutter</span>
+                  <span class="timeline-tag">Firebase</span>
+                  <span class="timeline-tag">TikTok UI</span>
+                  <span class="timeline-tag">Adopción</span>
+                </div>
+              </div>
+
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-website"></i>
+                </div>
+                <h4 class="timeline-title">
+                  Plataforma de Administración de Viajes
+                </h4>
+                <p class="timeline-period">2024</p>
+                <p class="timeline-description">
+                  Sistema web que permite a estudiantes reservar lugares en
+                  autobuses escolares de forma segura y organizada. Incluye
+                  gestión de usuarios y sistema de pagos.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Web</span>
+                  <span class="timeline-tag">Reservas</span>
+                  <span class="timeline-tag">Pagos</span>
+                  <span class="timeline-tag">Admin</span>
+                </div>
+              </div>
+
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-shopping-cart"></i>
+                </div>
+                <h4 class="timeline-title">Sistema de E-commerce</h4>
+                <p class="timeline-period">2024</p>
+                <p class="timeline-description">
+                  Desarrollo de sitio web con funcionalidades completas de
+                  carrito de compras, gestión de usuarios, catálogo de productos
+                  y sistema de pagos.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">E-commerce</span>
+                  <span class="timeline-tag">Carrito</span>
+                  <span class="timeline-tag">Catálogo</span>
+                  <span class="timeline-tag">Pagos</span>
+                </div>
+              </div>
+
+              <div class="timeline-item loading">
+                <div class="timeline-icon">
+                  <i class="gg-list"></i>
+                </div>
+                <h4 class="timeline-title">
+                  App Móvil de Seguimiento de Tareas
+                </h4>
+                <p class="timeline-period">2023</p>
+                <p class="timeline-description">
+                  Aplicación móvil que permite registrar, actualizar y
+                  visualizar tareas pendientes de manera eficiente con interfaz
+                  intuitiva.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Mobile</span>
+                  <span class="timeline-tag">Tareas</span>
+                  <span class="timeline-tag">UI/UX</span>
+                  <span class="timeline-tag">Productividad</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
